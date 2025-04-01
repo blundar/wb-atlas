@@ -46,8 +46,9 @@
 // With heater constantly on we
 // are not able to measure Vbatt
 // through Heater-
+// Lowered from 0.85 to 0.75 to decrease max current consumption -DB
 // *******************************
-#define HEATER_MAX_DUTY		(0.85)
+#define HEATER_MAX_DUTY		(0.75)
 
 // *******************************
 //   TunerStudio Primary Port

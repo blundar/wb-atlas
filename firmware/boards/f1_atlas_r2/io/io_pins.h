@@ -1,8 +1,8 @@
 #pragma once
 
 #define LED_BLUE_PORT GPIOB
-#define LED_BLUE_PIN 13
-#define LL_LED_BLUE_PIN LL_GPIO_PIN_13
+#define LED_BLUE_PIN 15
+#define LL_LED_BLUE_PIN LL_GPIO_PIN_15
 
 #define LED_GREEN_PORT GPIOA
 #define LED_GREEN_PIN 8
@@ -19,32 +19,34 @@
 
 // LSU 4.2 - 6.8K
 #define NERNST_42_ESR_DRIVER_PORT   GPIOB
-#define NERNST_42_ESR_DRIVER_PIN    12
+#define NERNST_42_ESR_DRIVER_PIN    13
 
 // LSU 4.9 - 22K
 #define NERNST_49_ESR_DRIVER_PORT	GPIOB
-#define NERNST_49_ESR_DRIVER_PIN	11
+#define NERNST_49_ESR_DRIVER_PIN	12
 
 #define NERNST_49_BIAS_PORT			GPIOB
-#define NERNST_49_BIAS_PIN			2
+#define NERNST_49_BIAS_PIN			10
 
 // LSU ADV - 47K
 #define NERNST_ADV_ESR_DRIVER_PORT	GPIOB
-#define NERNST_ADV_ESR_DRIVER_PIN	10
+#define NERNST_ADV_ESR_DRIVER_PIN	11
 
+//CHECK THESE VALUES
 #define HEATER_PWM_DEVICE			PWMD3
 #define HEATER_PWM_CHANNEL_0		0
 #define HEATER_PWM_CHANNEL_1		1
 
-// This board with current MCU is not able to output PWM signals to pins used for Heater MOSFETs
-// Using IRQ -> GPIO proxy
-#define HEATER_PWM_GPIO_PROXY		1
+//CHECK THESE VALUES
 // L_heater_pwm - PB7
+#define HEATER_PWM_DEVICE			PWMD3
+#define HEATER_PWM_CHANNEL_0			1
 #define L_HEATER_PORT				GPIOB
-#define L_HEATER_PIN				7
+#define L_HEATER_PIN				5
 // R_heater_pwm - PB6
+#define HEATER_PWM_CHANNEL_1			0
 #define R_HEATER_PORT				GPIOB
-#define R_HEATER_PIN				6
+#define R_HEATER_PIN				4
 
 // PA1 TIM2_CH2
 #define PUMP_DAC_PWM_DEVICE			PWMD2
