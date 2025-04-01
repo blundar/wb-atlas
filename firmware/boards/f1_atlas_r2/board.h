@@ -36,7 +36,7 @@
 #endif
 
 #if !defined(STM32_HSECLK)
-#define STM32_HSECLK                0U
+#define STM32_HSECLK                8000000U
 #endif
 /* this hardware has 8Mhz oscillator fitted */
 
