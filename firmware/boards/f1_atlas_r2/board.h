@@ -93,7 +93,7 @@
  * PA15 - NC
  */
 #define VAL_GPIOACRL            0x00000BB0      /*  PA7...PA0 */
-#define VAL_GPIOACRH            0x288B8892      /* PA15...PA8 */
+#define VAL_GPIOACRH            0x28888892      /* PA15...PA8 */
 #define VAL_GPIOAODR            0x0000FFFF
 
 /*
@@ -116,9 +116,9 @@
  * PB15 - Blue LED                  (output pushpull, 2 MHz)
  * CHECK VALUES BELOW
  */
-#define VAL_GPIOBCRL            0xAA888B00      /*  PB7...PB0 */
+#define VAL_GPIOBCRL            0x88888B00      /*  PB7...PB0 */
 #define VAL_GPIOBCRH            0x28434288      /* PB15...PB8 */
-#define VAL_GPIOBODR            0x0000FF3F
+#define VAL_GPIOBODR            0x0000FFFF
 
 /*
  * Port C setup. (only PC13..PC15 exist on 48-pin package)
