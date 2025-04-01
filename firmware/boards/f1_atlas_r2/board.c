@@ -45,4 +45,5 @@ void __early_init(void) {
  * Board-specific initialization code.
  */
 void boardInit(void) {
+  AFIO->MAPR |= AFIO_MAPR_TIM3_REMAP_PARTIALREMAP;   /* Partial remap of TIM3: CH1/PB4, CH2/PB5, CH3/PB0, CH4/PB1 */
 }
