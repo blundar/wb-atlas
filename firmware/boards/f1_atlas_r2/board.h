@@ -116,7 +116,7 @@
  * PB15 - Blue LED                  (output pushpull, 2 MHz)
  * CHECK VALUES BELOW
  */
-#define VAL_GPIOBCRL            0x88888B00      /*  PB7...PB0 */
+#define VAL_GPIOBCRL            0x88BB8400      /*  PB7...PB0 */
 #define VAL_GPIOBCRH            0x28434288      /* PB15...PB8 */
 #define VAL_GPIOBODR            0x0000FFFF
 
