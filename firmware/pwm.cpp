@@ -15,12 +15,20 @@ void Pwm::Start(const PWMConfig& config)
     m_counterPeriod = config.period;
 
     pwmStart(m_driver, &config);
+    if (config.callback != nullptr) {
+        pwmEnablePeriodicNotification(m_driver);
+    }
+    for (size_t i = 0; i < PWM_CHANNELS; i++) {
+        if (config.channels[i].callback != NULL) {
+            pwmEnableChannelNotification(m_driver, i);
+        }
+    }
 }
 
 void Pwm::SetDuty(int channel, float duty) {
     auto dutyFloat = clampF(0, duty, 1);
     m_dutyFloat[channel] = dutyFloat;
-    pwmcnt_t highTime = m_counterPeriod * dutyFloat;
+    pwmcnt_t highTime = (m_counterPeriod - 1) * dutyFloat;
 
     pwmEnableChannel(m_driver, channel, highTime);
 }
